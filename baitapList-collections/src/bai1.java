@@ -17,6 +17,6 @@ public class bai1 {
             System.out.print(arr[i] + " ");
             tong += arr[i];
         }
-        System.out.println("\nTổng các phần tử trong mảng là " + tong);
+        System.out.println("tổng các phần tử trong mảng là " + tong);
     }
 }
