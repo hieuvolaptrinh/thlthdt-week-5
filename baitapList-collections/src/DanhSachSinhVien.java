@@ -59,14 +59,15 @@ public class DanhSachSinhVien {
         Collections.sort(dsSV, new Comparator<SinhVien>() {
             @Override
             public int compare(SinhVien o1, SinhVien o2) {
-                if (o1.getDiemTB() > o2.getDiemTB()) {
-                    return 1;
-                } else if (o1.getDiemTB() < o2.getDiemTB()) {
-                    return -1;
-                } else {
-                    // Nếu điểm bằng nhau, so sánh theo tên
-                    return o1.getTenSV().compareTo(o2.getTenSV());
-                }
+                return o1.getTenSV().compareTo(o2.getTenSV());
+//                if (o1.getDiemTB() > o2.getDiemTB()) {
+//                    return 1;
+//                } else if (o1.getDiemTB() < o2.getDiemTB()) {
+//                    return -1;
+//                } else {
+//                    // Nếu điểm bằng nhau, so sánh theo tên
+//                    return o1.getTenSV().compareTo(o2.getTenSV());
+//                }
             }
         });
     }

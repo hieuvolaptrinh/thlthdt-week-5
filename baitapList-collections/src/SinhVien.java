@@ -55,7 +55,8 @@ public class SinhVien implements Comparable<SinhVien> {
 //        } else {
 //            return 0;
 //        }
-        return this.diemTB.compareTo(o.diemTB); // lưu ý phải kiểu đối tượng chỗ điểm là Float
+//        return this.diemTB.compareTo(o.diemTB); // lưu ý phải kiểu đối tượng chỗ điểm là Float
 //        return o.diemTB.compareTo(this.diemTB); // sắp xếp giảm dần
+        return this.tenSV.compareTo(o.tenSV);
     }
 }
