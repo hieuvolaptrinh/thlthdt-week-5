@@ -1,11 +1,10 @@
-package bai7;
-
+import java.util.Collections;
 import java.util.Scanner;
 
 public class bai7 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        DanhSachSInhVien ds = new DanhSachSInhVien();
+        DanhSachSinhVien ds = new DanhSachSinhVien();
         int luaChon;
         do {
             System.out.println("1. them sinh vien");
@@ -25,6 +24,7 @@ public class bai7 {
                 float diemTB = sc.nextFloat();
                 SinhVien sv=new SinhVien (maSV, tenSV, diemTB);
                 ds.themSinhVien(sv);
+
             }
             if(luaChon==2){
                 sc.nextLine();
@@ -41,11 +41,11 @@ public class bai7 {
 
             }
             if (luaChon == 4) {
-
                 ds.hienThiDanhSach();
             }
             if (luaChon == 5) {
-                ds.sapXepSinhVien();
+                Collections.sort(ds.getDsSV());
+//                ds.sapXepSinhVien();
                 ds.hienThiDanhSach();
             }
         } while (luaChon != 0);

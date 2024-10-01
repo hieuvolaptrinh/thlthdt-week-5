@@ -1,11 +1,9 @@
-package bai7;
-
 import java.util.Objects;
 
-public class SinhVien {
+public class SinhVien implements Comparable<SinhVien> {
     private String maSV;
     private String tenSV;
-    private float diemTB;
+    private Float diemTB;
 
     public SinhVien(String maSV, String tenSV, float diemTB) {
         this.maSV = maSV;
@@ -38,7 +36,6 @@ public class SinhVien {
     }
 //phải có toString để in ra
 
-
     @Override
     public String toString() {
         return "SinhVien{" +
@@ -46,5 +43,19 @@ public class SinhVien {
                 ", tenSV='" + tenSV + '\'' +
                 ", diemTB=" + diemTB +
                 '}';
+    }
+
+
+    @Override
+    public int compareTo(SinhVien o) {
+//        if (this.diemTB > o.diemTB) {
+//            return 1;
+//        } else if (this.diemTB < o.diemTB) {
+//            return -1;
+//        } else {
+//            return 0;
+//        }
+        return this.diemTB.compareTo(o.diemTB); // lưu ý phải kiểu đối tượng chỗ điểm là Float
+//        return o.diemTB.compareTo(this.diemTB); // sắp xếp giảm dần
     }
 }
